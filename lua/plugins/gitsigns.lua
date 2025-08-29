@@ -15,6 +15,7 @@ return {
             vim.keymap.set({'n','v'}, '<leader>gsh', gs.preview_hunk_inline)
             vim.keymap.set({'n','v'}, '<leader>gss', gs.stage_hunk)
             vim.keymap.set({'n','v'}, '<leader>gsr', gs.reset_hunk)
+            vim.keymap.set({'n','v'}, '<leader>gsd', gs.diffthis)
         end
     },
 }
