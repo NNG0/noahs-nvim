@@ -2,14 +2,14 @@ return {
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
-        config = function () 
+        config = function()
             local configs = require("nvim-treesitter.configs")
 
             configs.setup({
-                ensure_installed = { "lua", "vim", "vimdoc", "query", "javascript", "html", "rust", "python" },
+                ensure_installed = { "lua", "vim", "vimdoc", "query", "javascript", "html", "rust", "python", "json" },
                 sync_install = false,
                 highlight = { enable = true },
-                indent = { enable = true },  
+                indent = { enable = true },
             })
         end
     },
@@ -23,13 +23,27 @@ return {
             -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         },
         opts = {
-            filesystem = {
-                hijack_netrw_behavior = "open_default"
-            }
+            window = {
+                mappings = {
+                    ["P"] = {
+                        "toggle_preview",
+                        config = {
+                            use_float = false,
+                            use_snacks_image = false,
+                            use_image_nvim = false
+                        }
+                    },
+                    ["l"] = "focus_preview",
+                    ["<C-b>"] = { "scroll_preview", config = { direction = 10 } },
+                    ["<C-f>"] = { "scroll_preview", config = { direction = -10 } },
+                },
+                position = 'float',
+                --filesystem = { hijack_netrw_behavior = 'disabled' }
+            },
         },
         lazy = false,
         config = function()
-            vim.keymap.set('n', '<C-e>',':Neotree filesystem toggle float<CR>', {})
+            vim.keymap.set('n', '<leader>e', ':Neotree filesystem toggle float<CR>', {})
         end
     },
     {
