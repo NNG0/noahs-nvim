@@ -1,4 +1,5 @@
 return {
+    --[[
     {
         'stevearc/oil.nvim',
         ---@module 'oil'
@@ -13,4 +14,5 @@ return {
             vim.keymap.set('n', '<leader>eo', '<cmd>Oil<CR>', {})
         end
     },
+    ]]
 }

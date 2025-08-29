@@ -1,4 +1,5 @@
 return {
+    --[[
     {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
@@ -32,4 +33,5 @@ return {
             vim.keymap.set('n', '<leader>et', ':Neotree filesystem toggle float<CR>', {})
         end
     },
+    ]]
 }
