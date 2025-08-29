@@ -1,19 +1,5 @@
 return {
     {
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
-        config = function()
-            local configs = require("nvim-treesitter.configs")
-
-            configs.setup({
-                ensure_installed = { "lua", "vim", "vimdoc", "query", "javascript", "html", "rust", "python", "json" },
-                sync_install = false,
-                highlight = { enable = true },
-                indent = { enable = true },
-            })
-        end
-    },
-    {
         "nvim-neo-tree/neo-tree.nvim",
         branch = "v3.x",
         dependencies = {
