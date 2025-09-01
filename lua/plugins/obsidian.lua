@@ -23,6 +23,7 @@ return {
                 path = "~/shared_docs/uni",
             },
         },
+        legacy_commands = false,
 
         -- see below for full list of options 👇
     },
