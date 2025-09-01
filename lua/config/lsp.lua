@@ -1,4 +1,7 @@
-vim.lsp.enable('lua_ls', 'python_ls')
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('pyrefly')
+vim.lsp.enable('ts')
+
 
 vim.api.nvim_create_autocmd('LspAttach', {
     callback = function(args)
