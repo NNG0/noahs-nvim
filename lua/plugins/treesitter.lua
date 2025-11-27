@@ -18,6 +18,7 @@ return {
                     "json",
                     "markdown",
                     "markdown_inline",
+                    "kotlin"
                 },
                 sync_install = false,
                 highlight = { enable = true },
