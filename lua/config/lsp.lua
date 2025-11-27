@@ -1,6 +1,8 @@
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('pyrefly')
 vim.lsp.enable('ts')
+vim.lsp.enable('markdown')
+vim.lsp.enable('rust-analyzer')
 
 
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -23,4 +25,10 @@ vim.diagnostic.config({
     virtual_lines = {
         current_line = true
     },
+})
+
+vim.api.nvim_create_autocmd("InsertCharPre", {
+    callback = function()
+        vim.lsp.completion.get()
+    end,
 })
