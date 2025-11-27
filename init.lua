@@ -39,6 +39,24 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 })
 
 vim.cmd("colorscheme oxocarbon")
+---transparency---
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 
 vim.opt.cursorline = true
 
+--- vimtex ---
+vim.g.vimtex_view_method = 'zathura'
+vim.g.latex_view_general_viewer = 'zathura'
+
+--- open pdfs in zathura instead of nvim buffer ---
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "pdf",
+  callback = function(args)
+ -- Close the buffer that was going to show binary content
+    vim.cmd("bd! " .. args.buf)
+
+    -- Open Zathura
+    vim.fn.jobstart({ "zathura", args.file })  end,
+})
