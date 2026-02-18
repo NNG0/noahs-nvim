@@ -5,7 +5,9 @@ return {
         config = function()
             require('lualine').setup({
                 options = {
-                    theme = "oxocarbon"
+                    theme = "oxocarbon",
+                    section_separators = '',
+                    component_separators = ''
                 }
             })
         end
