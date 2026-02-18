@@ -21,8 +21,8 @@ vim.opt.termguicolors = true
 vim.opt.winborder = "rounded"
 
 vim.opt.clipboard:append { "unnamedplus" }
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+---vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+---vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 vim.keymap.set('n', '<leader>w', ':write<CR>')
 vim.keymap.set('n', '<leader>q', ':quit<CR>')
@@ -40,9 +40,9 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
 vim.cmd("colorscheme oxocarbon")
 ---transparency---
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+---vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+---vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+---vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 
 vim.opt.cursorline = true
 
