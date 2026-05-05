@@ -1,3 +1,6 @@
+vim.g.loaded_netrwPlugin = 1
+vim.g.mapleader = " "
+
 -- tab
 vim.opt.autoindent = true
 vim.opt.smartindent = true
@@ -16,6 +19,7 @@ vim.opt.swapfile = false
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.confirm = true
+vim.opt.autocomplete = true
 
 -- ui
 vim.opt.number = true
@@ -30,4 +34,3 @@ vim.opt.pumblend = 5
 vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-
