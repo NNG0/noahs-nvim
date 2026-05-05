@@ -30,9 +30,3 @@ vim.lsp.enable({
     "pyrefly",
     "black"
 })
-
-vim.diagnostic.config({
-    virtual_lines = {
-        current_line = true
-    },
-})
