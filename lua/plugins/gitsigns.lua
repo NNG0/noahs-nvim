@@ -12,10 +12,10 @@ return {
                 },]]
                 --current_line_blame_formatter = "<author>, <author_time:%Y-%m-%d> - <summary>",
             })
-            vim.keymap.set({'n','v'}, '<leader>gsh', gs.preview_hunk_inline)
-            vim.keymap.set({'n','v'}, '<leader>gss', gs.stage_hunk)
-            vim.keymap.set({'n','v'}, '<leader>gsr', gs.reset_hunk)
-            vim.keymap.set({'n','v'}, '<leader>gsd', gs.diffthis)
+            vim.keymap.set({ 'n', 'v' }, '<leader>gsp', gs.preview_hunk_inline)
+            vim.keymap.set({ 'n', 'v' }, '<leader>gss', gs.stage_hunk)
+            vim.keymap.set({ 'n', 'v' }, '<leader>gsr', gs.reset_hunk)
+            vim.keymap.set({ 'n', 'v' }, '<leader>gsd', gs.diffthis)
         end
     },
 }
