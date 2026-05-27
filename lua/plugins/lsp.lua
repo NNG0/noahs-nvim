@@ -6,12 +6,22 @@ vim.pack.add({
 })
 
 require("mason").setup()
+
+local LUA = "lua_ls"
+local MD = "markdown-oxide"
+local PY = "pyrefly"
+local BASH = "bash-language-server"
+local SHELLCHECK = "shellcheck"
+local SHELLFORMATING = "shfmt"
+
 require("mason-tool-installer").setup({
     ensure_installed = {
-        "lua_ls",
-        "markdown-oxide",
-        "pyrefly",
-        "black"
+        LUA,
+        MD,
+        PY,
+        BASH,
+        SHELLCHECK,
+        SHELLFORMATING
     }
 })
 require("mason-lspconfig").setup({
@@ -19,14 +29,14 @@ require("mason-lspconfig").setup({
 })
 
 -- vim.lsp.config()
-vim.lsp.config('lua_ls', {})
-vim.lsp.config('markdown-oxide', {})
-vim.lsp.config('pyrefly', {})
-vim.lsp.config('black', {})
+vim.lsp.config(LUA, {})
+vim.lsp.config(MD, {})
+vim.lsp.config(PY, {})
+vim.lsp.config(BASH, {})
 
 vim.lsp.enable({
-    'lua_ls',
-    "markdown-oxide",
-    "pyrefly",
-    "black"
+    LUA,
+    MD,
+    PY,
+    BASH,
 })
