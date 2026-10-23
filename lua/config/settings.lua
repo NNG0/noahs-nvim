@@ -29,8 +29,13 @@ vim.opt.termguicolors = true
 vim.opt.showmode = false
 vim.opt.pumheight = 10
 vim.opt.pumblend = 5
+vim.opt.conceallevel = 1
 
 -- search
 vim.opt.incsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+-- autocomplete v13
+-- vim.o.autocomplete = true
+-- vim.o.completeopt = 'menu,menuone,preselect'
